@@ -19,7 +19,8 @@ header{
     justify-items: stretch;
 }
 header img{
-    height:auto;width: auto;
+    width: 90%;height: auto;
+    object-fit: contain;
     margin:5%;
 }
 header h1{
@@ -206,7 +207,7 @@ footer {
 
     .menu-btn {
         visibility: visible;
-        display:block;
+        display:grid;
         align-content: center;
         padding:1%;
     }
