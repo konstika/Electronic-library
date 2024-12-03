@@ -17,7 +17,6 @@ search.addEventListener('keydown',function(event){
 });
 /*Создание списка книг для показа*/
 function createBooks(){
-    console.log(select_mark.value, search.value);
     var class_books = data_katalog
     if(select_mark.value=="not_mark"){
         class_books = data_katalog.filter(book => 
@@ -26,7 +25,6 @@ function createBooks(){
     else if(select_mark.value!="all"){class_books = data_katalog.filter(book => book[select_mark.value]==true);}
     var list_books = class_books;
     if(search.value!==""){
-        console.log("search");
         list_books = class_books.filter(book => ((book.title).toLowerCase()).includes((search.value).toLowerCase()) 
         || ((book.author).toLowerCase()).includes((search.value).toLowerCase()));
     }
