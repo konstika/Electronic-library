@@ -20,5 +20,7 @@ else{
 //загрузка содержимого страницы
 function loadContent(book){
     const text = document.getElementById("text");
-    text.src = book.text;
+    const other_text = document.getElementById("other_text");
+    text.data = book.text;
+    other_text.src = book.text;
 }
