@@ -20,6 +20,6 @@ else{
 //загрузка содержимого страницы
 function loadContent(book){
     const text = document.getElementById("text");
-    text.src = "https://drive.google.com/file/d/1IFRbYrYcUqpd7-UI4-BVDuck12Psx8iq/preview";
+    text.src = book.text;
     console.log("https://docs.google.com/gview?url="+book.text+"&embedded=true");
 }
