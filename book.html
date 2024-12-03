@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Интернет-библиотека</title> <!--Название вкладки-->
+    <link rel="icon" href="image/favicon.png"> <!--Подключение фавиконки-->
+    <link rel="stylesheet" href="styles/style_book.css">
+</head>
+
+<body>
+    <script src="scripts/script_book.js" defer></script>
+    <header>
+        <img src="image/favicon.png">
+        <h1>Библиотека</h1>
+        <!--Кнопка меню-бургера-->
+        <input id="toggle" type="checkbox"/>
+        <label class="menu-btn" for="toggle">
+            <span class="icon-burger"></span>
+        </label>
+        <nav>
+            <a href="index.html">Вход</a>
+            <a href="katalog.html">Каталог</a>
+            <a href="about_us.html">О нас</a>
+        </nav>
+    </header>
+    <main>
+        <img id="book_image">
+        <div id="block_text">
+            <h1 id="title"></h1>
+            <h3 id="author"></h3>
+            <p id="annotation"></p>
+        </div>
+        <a id="button_to_read_this_book" class="button_this_book" href="text_book.html">Читать</a>
+        <form id="form_feedback">
+            <textarea id="feedback" placeholder="Оставьте отзыв:" name="feedback" rows="5" required></textarea>
+            <button type="submit" class="button_form">Отправить</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Электронная библиотека. Все права защищены.</p>
+    </footer>
+</body>
+</html>

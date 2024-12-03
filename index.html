@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Интернет-библиотека</title> <!--Название вкладки-->
+    <link rel="icon" href="image/favicon.png"> <!--Подключение фавиконки-->
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <script src="scripts/script.js" defer></script>
+
+    <div class="parallax">
+        <h1 id="heading">Библиотека<h1>
+    </div>
+    <main>
+        <h1>Добро пожаловать!</h1>
+
+        <!--Кнопка меню-бургера-->
+        <input id="toggle" type="checkbox"/>
+        <label class="menu-btn" for="toggle">
+            <span class="icon-burger"></span>
+        </label>
+        <nav>
+            <a href="#entry">Вход</a>
+            <a href="katalog.html">Каталог</a>
+            <a href="about_us.html">О нас</a>
+        </nav>
+        <form name="registration" id="registration" method="get">
+            <legend>Регистрация</legend>
+            <input type="text" required minlength="4" maxlength="16" placeholder="Логин:">
+            <input type="password" required minlength="4" maxlength="16" placeholder="Пароль:">
+            <input type="text" required minlength="4" maxlength="16" placeholder="Почта:">
+            <button type="submit" class="button_form" id="button_regist">Зарегистрироваться</button>
+            <a href="#entry" id="reg_link">Уже есть аккаунт?</a>
+        </form>
+        <form name="entry" id="entry" method="get">
+            <legend>Вход</legend>
+            <input type="text" required minlength="4" maxlength="16" placeholder="Логин:">
+            <input type="password" required minlength="4" maxlength="16" placeholder="Пароль:">
+            <button type="submit" class="button_form" id="button_entry">Войти</button>
+            <a href="#registration" id="entry_link">Нет аккаунта?</a>
+        </form>
+        
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Электронная библиотека. Все права защищены.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Интернет-библиотека: Каталог</title> <!--Название вкладки-->
+    <link rel="icon" href="image/favicon.png"> <!--Подключение фавиконки-->
+    <link rel="stylesheet" href="styles/style_katalog.css">
+</head>
+
+<body>
+    <script src="scripts/data_katalog.js" defer></script>
+    <script src="scripts/script_katalog.js" defer></script>
+    <header>
+        <img src="image/favicon.png">
+        <h1>Библиотека</h1>
+        <!--Кнопка меню-бургера-->
+        <input id="toggle" type="checkbox"/>
+        <label class="menu-btn" for="toggle">
+            <span class="icon-burger"></span>
+        </label>
+        <nav>
+            <a href="index.html">Вход</a>
+            <a href="katalog.html">Каталог</a>
+            <a href="about_us.html">О нас</a>
+        </nav>
+    </header>
+    <main>
+        <input id="search" type="search" placeholder="Поиск:"></input>
+        <form id="select_mark_block">
+            <legend>Отображать книги:</legend>
+            <select id="select_mark">
+                <option value="all">Все</option>
+                <option value="read">Читаю</option>
+                <option value="readed">Прочитано</option>
+                <option value="plan">В планах</option>
+                <option value="not_mark">Без метки</option>
+            </select>
+        </form>
+        <div id="books"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Электронная библиотека. Все права защищены.</p>
+    </footer>
+</body>
+</html>

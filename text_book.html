@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Интернет-библиотека: Каталог</title> <!--Название вкладки-->
+    <link rel="icon" href="image/favicon.png"> <!--Подключение фавиконки-->
+    <link rel="stylesheet" href="styles/style_text_book.css">
+</head>
+
+<body>
+    <script src="scripts/script_text_book.js" defer></script>
+    
+    <header>
+        <img src="image/favicon.png">
+        <h1>Библиотека</h1>
+        <!--Кнопка меню-бургера-->
+        <input id="toggle" type="checkbox"/>
+        <label class="menu-btn" for="toggle">
+            <span class="icon-burger"></span>
+        </label>
+        <nav>
+            <a href="index.html">Вход</a>
+            <a href="katalog.html">Каталог</a>
+            <a href="about_us.html">О нас</a>
+        </nav>
+    </header>
+    <main>
+        <iframe id="text" type="application/pdf">Ошибка загрузки</iframe>
+    </main>
+    <footer>
+        <p>&copy; 2024 Электронная библиотека. Все права защищены.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Интернет-библиотека</title> <!--Название вкладки-->
+    <link rel="icon" href="image/favicon.png"> <!--Подключение фавиконки-->
+    <link rel="stylesheet" href="styles/style_about_us.css">
+</head>
+
+<body>
+    <script src="scripts/script_book.js" defer></script>
+    <header>
+        <img src="image/favicon.png">
+        <h1>Библиотека</h1>
+        <!--Кнопка меню-бургера-->
+        <input id="toggle" type="checkbox"/>
+        <label class="menu-btn" for="toggle">
+            <span class="icon-burger"></span>
+        </label>
+        <nav>
+            <a href="index.html">Вход</a>
+            <a href="katalog.html">Каталог</a>
+            <a href="about_us.html">О нас</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <p>Электронная библиотека была основана в 2024 с целью предоставить доступ к качественным образовательным материалам и литературе для всех пользователей. Мы стремимся сделать знания доступными для каждого!</p>
+        </section>
+        
+        <section>
+            <h3>Миссия и ценности</h3>
+            <p><strong>Наша миссия:</strong> обеспечить доступ к знаниям и информации, способствовать обучению и развитию.</p>
+            <ul>
+                <li>Доступность</li>
+                <li>Сообщество</li>
+                <li>Поддержка</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h3>Услуги библиотеки</h3>
+            <ul>
+                <li>Доступ к электронным книгам и журналам</li>
+                <li>Онлайн-курсы и вебинары</li>
+                <li>Консультации с библиотекарями</li>
+                <li>Форумы для обсуждения книг</li>
+            </ul>
+        </section>
+        
+
+        
+        <form method="POST" id="support-form">
+            <h3>Связаться с поддержкой</h3>
+            <div>
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+            </div> 
+            <div>  
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div> 
+            <div>
+                <label for="message">Сообщение:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="button_form">Отправить</button>
+        </form>
+   
+       
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Электронная библиотека. Все права защищены.</p>
+    </footer>
+</body>
+</html>
