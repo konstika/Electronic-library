@@ -14,7 +14,7 @@ header{
     width:100%;height: fit-content;
     margin:0;
     display:grid;
-    grid-template-columns: 10% 90%;
+    grid-template-columns: 5% 95%;
     grid-template-rows: auto auto;
     justify-items: stretch;
 }
@@ -173,15 +173,17 @@ main{
 }
 .button_book::before{
     content: "";
+    visibility: hidden;
     position:absolute;
     width:100%; height:100%;
     left:0; top:0;
     background-color: coral;
     z-index: -1;
-    transition:all 0.8s;
+    transition: transform 0.6s;
     transform: translateX(-200%);
 }
 .button_book:hover::before{
+    visibility:visible;
     transform:translateX(0);
 }
 
@@ -198,7 +200,9 @@ footer {
     #books{
         grid-template-columns: repeat(2, auto);
     }
-
+    .button_book::before{
+        display:none;
+    }
     /*Адаптация навигации*/
     nav{
         visibility: hidden;
