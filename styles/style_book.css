@@ -1,0 +1,220 @@
+html, body{
+    margin:0;
+    padding:0;
+}
+a{
+    text-decoration: none;
+}
+/*Оформление шапки*/
+header{
+    background-color: rgb(105, 16, 16);
+    width:100%;height: max-content;
+    margin:0;
+    display:grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: auto auto;
+    justify-items: stretch;
+}
+header img{
+    height:auto;width: auto;
+    margin:5%;
+}
+header h1{
+    color:burlywood;
+    align-self: center;
+    font-size: 2rem;
+    margin:0;
+}
+/*Навигация*/
+header nav{
+    grid-column: span 2;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(3, calc(100%/3));
+    justify-items:stretch;
+}
+header nav a{
+    color:burlywood;
+    position:relative;
+    text-align: center;
+    padding:2% 0 2% 0;
+    border: 1px solid rgb(90, 16, 16);
+    background-color:rgb(105, 16, 16);
+}
+nav a::before{
+    content:"";
+    opacity:0;
+    position:absolute;
+    top:0;left:0;
+    width:100%;height: 100%;
+    background-color:rgba(255, 255, 255, 0.1);
+}
+nav a:hover::before{
+    opacity: 1;
+}
+#toggle{
+    display: none;
+}
+.menu-btn{
+    position:fixed;
+    background-color: rgb(105, 16, 16);
+    border-radius: 5px;
+    padding:1%;
+    width:40px;height:40px;
+    top:10px;right:10px;
+    visibility: hidden;
+    display:none;
+    cursor: pointer;
+    z-index: 3;
+}
+main{
+    background-color: burlywood;
+    margin:1%;padding:3%;
+    border-radius: 10px;
+    display:grid;
+    grid-template-columns: 30% auto;
+    grid-template-rows: auto 10% auto;
+    grid-gap: 1%;
+}
+#book_image{
+    width:100%;height:auto;
+    grid-row: span 2;
+}
+#block_text{
+    background-color: white;
+    border-radius: 10px;
+    border:2px solid brown;
+    color:brown;
+    padding:2%;
+}
+h1{
+    margin:0;
+}
+
+#button_to_read_this_book{
+    width:100%;height:100%;
+    min-height: fit-content;
+    align-content: center;
+    border: 2px solid burlywood;
+    background-color: brown;
+    border-radius: 10px;
+    color:burlywood;
+    text-align: center;
+    cursor:pointer;
+    overflow: hidden;
+}
+
+#form_feedback{
+    grid-column: span 2;
+    width:100%;height: 100%;
+}
+#feedback{
+    display:block;
+    resize: none;
+    background-color:rgb(130, 16, 16);
+    border-radius: 10px;
+    border-color: brown;
+    color:burlywood;
+    width:100%;
+    box-sizing: border-box;
+    padding:1%;
+    margin:1% 0 1% 0;
+}
+#feedback::placeholder{
+    color:burlywood;
+}
+
+.button_form{
+    display: block;
+    background-color: coral;
+    border-radius: 10px;
+    color:brown;
+    padding:1%;
+    width:fit-content;
+    border-color: rgb(130, 16, 16);
+    cursor:pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(105, 16, 16);
+    color:burlywood;
+}
+
+/*Макет сайта для мобильных устройств*/
+@media(max-width:700px){
+    main{
+        grid-template-columns:auto;
+        grid-template-rows: repeat(4,auto);
+        grid-gap: 1%;
+    }
+    #book_image{
+        grid-row: span 1;
+    }
+    #button_to_read_this_book{
+        padding:2% 0 2% 0;
+    }
+    #form_feedback{
+        grid-column: span 1;
+        margin:3% 0 3% 0;
+    }
+
+
+    /*Адаптация навигации*/
+    nav{
+        visibility: hidden;
+        display:none;
+    }
+
+    .menu-btn {
+        visibility: visible;
+        display:block;
+        align-content: center;
+        padding:1%;
+    }
+
+    .icon-burger, .icon-burger::before, .icon-burger::after{
+        content:"";
+        display:block;
+        background-color:coral;
+        height:5px;width: auto;
+        border-radius: 5px;
+    }
+    .icon-burger:before{
+        transform: translateY(-15px);
+    }
+    .icon-burger::after{
+        transform:translateY(10px);
+    }
+
+
+    #toggle:checked ~ nav{
+        visibility:visible;
+        display:block;
+        width:100%;
+        position:fixed;
+        margin:0;
+        top:0;right:0;
+        z-index: 1;
+    }
+    #toggle:checked ~ nav a{
+        display:block;
+    }
+    #toggle:checked + .menu-btn .icon-burger:before{
+        transform: translateY(0) rotate(90deg);
+    }
+    #toggle:checked + .menu-btn .icon-burger:after{
+        display:none
+    }
+    #toggle:checked + .menu-btn .icon-burger{
+        transform: rotate(45deg);
+    }
+}
+
+@media(max-width:400px){
+    /*Адаптация шапки*/
+    header{
+        grid-template-columns: 20% 80%;
+    }
+}
