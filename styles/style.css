@@ -4,10 +4,10 @@ html, body{
     position:relative;
 }
 .parallax {
+    background-image: url('../image/library_back4.jpg');
     height: 90vh; top:0;
     padding-top:20%;text-align: center;
     max-width: 100%;
-    background-image: url('../image/library_back4.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
