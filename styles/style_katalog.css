@@ -132,6 +132,7 @@ main{
     top:0;left:0;
     width:100%;height:100%;
     background-color: rgb(165, 42, 42);
+    z-index: 1;
     display:grid;
     grid-template-columns: repeat(2, 40%);
     grid-template-rows: 15% 15% 55% 10%;
@@ -235,7 +236,7 @@ footer {
         position:fixed;
         margin:0;
         top:0;right:0;
-        z-index: 1;
+        z-index: 2;
     }
     #toggle:checked ~ nav a{
         display:block;
