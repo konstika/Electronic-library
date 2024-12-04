@@ -50,24 +50,38 @@
             </ul>
         </section>
         
-
-        
-        <form method="POST" id="support-form">
-            <h3>Связаться с поддержкой</h3>
+        <section id="contacs">
             <div>
-                <label for="name">Имя:</label>
-                <input type="text" id="name" name="name" required>
-            </div> 
-            <div>  
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div> 
-            <div>
-                <label for="message">Сообщение:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+                <h3>Контакты</h3>
+                <div class="contacs_line"><img src="image/phone.svg" class="icon_contacs"><a href="tel:+79851926686">Номер телефона</a></div>
+                <div class="contacs_line"><img src="image/email.svg" class="icon_contacs"><a href="mailto:n3mm@mail.ru">Почта</a></div>
             </div>
-            <button type="submit" class="button_form">Отправить</button>
-        </form>
+            <form id="support-form">
+                <h3>Связаться с поддержкой</h3>
+                <div>
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" required>
+                </div> 
+                <div>  
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div> 
+                <div>
+                    <label for="message">Сообщение:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="button_form">Отправить</button>
+            </form>
+
+            <div>
+                <p>Подписывайтесь на наши соцсети:</p>
+                <div id = "block_button_social">
+                    <button class="button_contacs"><img src="image/vk.svg"></button>
+                    <button class="button_contacs"><img src="image/telegram.svg"></button>
+                    <button class="button_contacs"><img src="image/youtube.svg"></button>
+            </div>
+            </div>
+        </section>
    
        
     </main>
